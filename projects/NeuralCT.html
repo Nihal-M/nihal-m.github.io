@@ -1,0 +1,138 @@
+<!-- Stolen from  Georgia Gkioxari at https://gkioxari.github.io/ -->
+<html>
+<head>
+  <title>NeuralCT</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+
+<div class="container">
+  <h1><span style="font-size:42px">Neural Computed Tomography</span></h1>
+  <br>
+  <table width="800px" align="center">
+    <tr>
+      <td align=center width=100px>
+        <center>
+          <span style="font-size:24px"><a href="http://kunalmgupta.github.io/">Kunal Gupta</a></span>
+        </center>
+      </td>
+      <td align=center width=100px>
+        <center>
+          <span style="font-size:24px"><a href="https://www.linkedin.com/in/brendan-colvert/">Brendan Colvert</a></span>
+        </center>
+      </td>
+      <td align=center width=100px>
+        <center>
+          <span style="font-size:24px"><a href="https://contijoch.ucsd.edu/people/contijoch_francisco.html">Francisco Contijoch</a></span>
+        </center>
+      </td>
+
+  </table>
+  <br>
+  <table>
+    <tr>
+      <span style="font-size: 22px"> UC San Diego </span>
+    </tr>
+    <br><br>
+<!--     <tr>
+      <span style="font-size: 20px"> NeurIPS 2020 </span>
+      &nbsp <font color="red">(Spotlight)</font>
+    </tr> -->
+  </table>
+  <br>
+  <table width="400px" align="center">
+    <tr>
+      <td align=center width=100px>
+        <center>
+          <span style="font-size:24px"><a href="https://arxiv.org/abs/2201.06574">[Paper]</a></span>
+        </center>
+      </td>
+      <td align=center width=100px>
+        <center>
+          <span style="font-size:24px"><a href=""> [Code] </a></span>
+          &nbsp <font color="red">(Coming soon!)</font>
+        </center>
+      </td>
+  </table>
+<!--   </p> -->
+  </div>
+</br>
+
+<div class="container">
+  <h1>Abstract</h1>
+    <p align="justify">
+      Motion during acquisition of a set of projections can lead to significant motion artifacts in computed tomography reconstructions despite fast acquisition of individual views. 
+In cases such as  cardiac imaging, motion may be unavoidable and evaluating motion may be of clinical interest. 
+Reconstructing images with reduced motion artifacts has  typically been achieved by developing systems with faster gantry rotation or using algorithms which measure and/or estimate the displacements.
+However, these approaches have had limited success due to both physical constraints as well as the challenge of estimating/measuring non-rigid, temporally varying, and patient-specific motions. 
+We propose a novel reconstruction framework, NeuralCT, to generate time-resolved images free from motion artifacts. 
+Our approaches utilizes a neural implicit approach and does not require estimation or modeling of the underlying motion. 
+Instead, boundaries are represented using a signed distance metric and neural implicit framework.
+We utilize 'analysis-by-synthesis' to identify a solution consistent with the acquired sinogram as well as spatial and temporal consistency constraints. 
+We illustrate the utility of NeuralCT in three  progressively more complex scenarios: translation of a small circle, heartbeat-like change in an ellipse's diameter, and complex topological deformation. 
+Without hyperparameter tuning or change to the architecture, NeuralCT provides high quality image reconstruction for all three motions, as compared to filtered backprojection using  mean-square-error and Dice metrics.
+    </p>
+</div>
+
+</br>
+
+<div class="container">
+  <h1>Supplementary Video</h1>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/QB4N90jZ9k4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <br><br>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/mSwLJwz5xtQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <!-- <p><embed src="https://youtu.be/eluoFC0W0Mk" width=1100px align="middle" /></p> -->
+</div>
+
+</br>
+
+<div class="container">
+  <h1> Paper</h1>
+  <table align=center width=600px height=250px>
+  <tr>
+    <td align=left width=300px><a href="https://arxiv.org/pdf/2201.06574.pdf"><img class="layered-paper-big" style="height:180px" src="NeuralCT/NeuralCT.png"/></a></td>
+    <td align=left width=500px style="color: #4d4b59; font-size:14pt">@misc{gupta2022neural,<br>
+    title={Neural Computed Tomography},<br>
+    author={Kunal Gupta and Brendan Colvert and Francisco Contijoch},<br>
+    year={2022},<br>
+    eprint={2201.06574},<br>
+    archivePrefix={arXiv},<br>
+    primaryClass={eess.IV}
+}<br><br>
+
+    </td>
+  </tr>
+  </table>
+</div>
+
+</br>
+
+<div class="container">
+  <h1>Acknowledgement</h1>
+    <p align="justify">
+      We thank <a href="https://sites.google.com/view/zhennong-chen">Zhennong Chen</a> for comments and insightful discussion regarding the manuscript. This work was supported by NIH grant HL143113
+    </p>
+</div>
+
+</br>
+
+<div class="container">
+  <h1>References</h1>
+    <p align="justify">
+      [1] Mildenhall, Ben, et al. "Nerf: Representing scenes as neural radiance fields for view synthesis." European conference on computer vision. Springer, Cham, 2020.<br>
+      [2] Contijoch, Francisco, J. Webster Stayman, and Elliot R. McVeigh. "The impact of small motion on the visualization of coronary vessels and lesions in cardiac CT: a simulation study." Medical physics 44.7 (2017): 3512-3524. <br>
+      [3] Sitzmann, Vincent, et al. "Implicit neural representations with periodic activation functions." arXiv preprint arXiv:2006.09661 (2020). <br>
+    </p>
+</div>
+
+</br>
+
+<div class="containersmall">
+  <p>Contact: <a href="mailto:k5gupta@eng.ucsd.edu">Kunal Gupta</a></p>
+  <p align="left">Template stolen from <a href="https://gkioxari.github.io/meshrcnn/index.html">Georgia Gkioxari</a></p>
+</div>
+
+<!--<p align="center" class="acknowledgement">Last updated: 30 July 2012</p>-->
+</body>
+</html>

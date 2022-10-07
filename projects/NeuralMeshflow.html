@@ -1,0 +1,182 @@
+<!-- Stolen from  Georgia Gkioxari at https://gkioxari.github.io/ -->
+<html>
+<head>
+  <title>NeuralMeshFlow</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+
+<div class="container">
+  <h1><span style="font-size:42px">Neural Mesh Flow: 3D Manifold Mesh Generation via Diffeomorphic Flows </span></h1>
+  <br>
+  <table width="600px" align="center">
+    <tr>
+      <td align=center width=100px>
+        <center>
+          <span style="font-size:24px"><a href="http://kunalmgupta.github.io/">Kunal Gupta</a></span>
+        </center>
+      </td>
+      <td align=center width=100px>
+        <center>
+          <span style="font-size:24px"><a href="http://cseweb.ucsd.edu/~mkchandraker/">Manmohan Chandraker</a></span>
+        </center>
+      </td>
+      <!-- <td align=center width=100px>
+        <center>
+        <span style="font-size:24px"><a href="https://cs.stanford.edu/people/jcjohns/">Justin Johnson</a></span>
+        </center>
+      </td> -->
+  </table>
+  <br>
+  <table>
+    <tr>
+      <span style="font-size: 22px"> UC San Diego </span>
+    </tr>
+    <br><br>
+    <tr>
+      <span style="font-size: 20px"> NeurIPS 2020 </span>
+      &nbsp <font color="red">(Spotlight)</font>
+    </tr>
+  </table>
+  <br>
+  <table width="400px" align="center">
+    <tr>
+      <td align=center width=100px>
+        <center>
+          <span style="font-size:24px"><a href="https://arxiv.org/abs/2007.10973">[Paper]</a></span>
+        </center>
+      </td>
+      <td align=center width=100px>
+        <center>
+          <span style="font-size:24px"><a href="https://github.com/KunalMGupta/NeuralMeshFlow"> [Code] </a></span>
+        </center>
+      </td>
+  </table>
+
+  <p>
+      <div class="row">
+
+        <div class="column">
+          <img src="NeuralMeshFlow/mrcnnsim.gif" style="width:100%; padding-top:35px;">
+          <br>
+          <br>
+          Mesh RCNN [1]
+        </div>
+        <!-- <div class="smallcolumn">
+          <hr style="width: 1px; height: 350px; background: #c8c8c8; border: none;" />
+        </div> -->
+        <div class="column">
+          <img src="NeuralMeshFlow/nmfsim.gif" style="width:100%; padding-top:35px;">
+          <br>
+          <br>
+          Ours
+        </div>
+        <!-- <div class="smallcolumn">
+          <hr style="width: 1px; height: 350px; background: #c8c8c8; border: none;" />
+        </div> -->
+        <div class="column">
+          <img src="NeuralMeshFlow/gtsim.gif" style="width:100%; padding-top:35px;">
+          <br>
+          <br>
+          Ground Truth
+        </div>
+        <div class="column">
+          <img src="NeuralMeshFlow/mrcnnrender.gif" style="width:100%; padding-top:35px;">
+          <br>
+          <br>
+          Mesh RCNN [1]
+        </div>
+        <!-- <div class="smallcolumn">
+          <hr style="width: 1px; height: 350px; background: #c8c8c8; border: none;" />
+        </div> -->
+        <div class="column">
+          <img src="NeuralMeshFlow/nmfrender.gif" style="width:100%; padding-top:35px;">
+          <br>
+          <br>
+          Ours
+        </div>
+        <div class="column">
+          <img src="NeuralMeshFlow/gtrender.gif" style="width:100%; padding-top:35px;">
+          <br>
+          <br>
+          Ground Truth
+        </div>
+
+        <!-- <div class="column">
+          <img src="atlassim.gif" style="width:100%; padding-top:15px;">
+          <img src="atlassim.gif" style="width:100%; padding-top:5px;">
+        </div> -->
+      </div>
+  </p>
+</div>
+
+</br>
+
+<div class="container">
+  <h1>Abstract</h1>
+    <p align="justify">
+      Meshes are important representations of physical 3D entities in the virtual world. Applications like rendering, simulations and 3D printing require meshes to be manifold so that they can interact with the world like the real objects they represent. Prior methods generate meshes with great geometric accuracy but poor manifoldness. In this work we propose Neural Mesh Flow (NMF) to generate two-manifold meshes for genus-0 shapes. Specifically, NMF is a shape auto-encoder consisting of several Neural Ordinary Differential Equation (NODE)[2] blocks that learn accurate mesh geometry by progressively deforming a spherical mesh. Training NMF is simpler compared to state-of-the-art methods since it does not require any explicit mesh-based regularization. Our experiments demonstrate that NMF facilitates several applications such as single-view mesh reconstruction, global shape parameterization, texture mapping, shape deformation and correspondence. Importantly, we demonstrate that manifold meshes generated using NMF are better-suited for physically-based rendering and simulation.
+    </p>
+</div>
+
+</br>
+
+<div class="container">
+  <h1>Supplementary Video</h1>
+  <iframe width="840" height="473" src="https://www.youtube.com/embed/eluoFC0W0Mk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <!-- <p><embed src="https://youtu.be/eluoFC0W0Mk" width=1100px align="middle" /></p> -->
+</div>
+
+</br>
+
+<div class="container">
+  <h1> Paper</h1>
+  <table align=center width=600px height=250px>
+  <tr>
+    <td align=left width=300px><a href="https://arxiv.org/pdf/2007.10973"><img class="layered-paper-big" style="height:180px" src="NeuralMeshFlow/NeuralMeshFlow.png"/></a></td>
+    <td align=left width=500px style="color: #4d4b59; font-size:14pt">@misc{gupta2020neural,<br>
+    title={Neural Mesh Flow: 3D Manifold Mesh Generationvia Diffeomorphic Flows},<br>
+    author={Kunal Gupta and Manmohan Chandraker},<br>
+    year={2020},<br>
+    eprint={2007.10973},<br>
+    archivePrefix={arXiv},<br>
+    primaryClass={cs.CV}
+}<br><br>
+
+    </td>
+  </tr>
+  </table>
+</div>
+
+</br>
+
+<div class="container">
+  <h1>Acknowledgement</h1>
+    <p align="justify">
+      We would like to thank Krishna Murthy Jatavallabhula for valuable  discussions. We would also like to thank Pengcheng Cao with UCSD CHEI for providing 3D printed models and Shreyam Natani for helping with Blender.
+    </p>
+</div>
+
+</br>
+
+<div class="container">
+  <h1>References</h1>
+    <p align="justify">
+      [1] Gkioxari, Georgia, Jitendra Malik, and Justin Johnson. "Mesh r-cnn." Proceedings of the IEEE International Conference on Computer Vision. 2019. <br>
+      [2] Chen, Ricky TQ, et al. "Neural ordinary differential equations." Advances in neural information processing systems. 2018. <br>
+      [3] Groueix, Thibault, et al. "A papier-mache approach to learning 3d surface generation." Proceedings of the IEEE conference on computer vision and pattern recognition. 2018. <br>
+      [4] Wang, Nanyang, et al. "Pixel2mesh: Generating 3d mesh models from single rgb images." Proceedings of the European Conference on Computer Vision (ECCV). 2018. <br>
+    </p>
+</div>
+
+</br>
+
+<div class="containersmall">
+  <p>Contact: <a href="mailto:k5gupta@eng.ucsd.edu">Kunal Gupta</a></p>
+  <p align="left">Template stolen from <a href="https://gkioxari.github.io/meshrcnn/index.html">Georgia Gkioxari</a></p>
+</div>
+
+<!--<p align="center" class="acknowledgement">Last updated: 30 July 2012</p>-->
+</body>
+</html>
