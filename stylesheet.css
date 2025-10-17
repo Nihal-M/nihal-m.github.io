@@ -55,12 +55,18 @@ span.highlight { background-color: #ffffd0; }
 /* Make all images responsive */
 img { max-width: 100%; height: auto; }
 
-/* Desktop headshot cap */
-.headshot { max-width: 400px; }
+/* ---------------------- */
+/*  HEADSHOT SIZING       */
+/* ---------------------- */
 
-/* ---------------------- */
-/*  RESPONSIVE DESIGN     */
-/* ---------------------- */
+/* Default (desktop/laptop) */
+.headshot {
+  max-width: 300px;        /* balanced size for normal screens */
+  width: 100%;
+  border-radius: 12px;
+}
+
+/* Medium screens (tablets) */
 @media (max-width: 900px) {
   .intro-text,
   .intro-photo {
@@ -71,15 +77,14 @@ img { max-width: 100%; height: auto; }
 
   .intro-photo .nudge { margin-top: 8px !important; }
 
-  /* Force large centered headshot on mobile */
+  /* Headshot slightly smaller for tablets */
   .headshot {
-    width: 95% !important;
-    max-width: 600px !important;
-    margin: 12px auto !important;
-    border-radius: 14px;
+    width: 80% !important;
+    max-width: 320px !important;
+    margin: 10px auto !important;
   }
 
-  /* Stack 40/60 content blocks */
+  /* Stack 40/60 publication rows */
   td[style*="width:40%"],
   td[style*="width:60%"] {
     display: block;
@@ -89,9 +94,27 @@ img { max-width: 100%; height: auto; }
   table { table-layout: fixed; }
 }
 
-@media (max-width: 480px) {
+/* Small screens (phones) */
+@media (max-width: 600px) {
   .headshot {
-    width: 95% !important;
-    max-width: 380px !important;
+    width: 75% !important;
+    max-width: 300px !important;
+    margin: 8px auto 4px !important;
+  }
+
+  /* reduce large margin between text and photo */
+  .intro-photo .nudge { margin-top: 6px !important; }
+}
+
+/* Very small phones (<420px) */
+@media (max-width: 420px) {
+  .headshot {
+    width: 70% !important;
+    max-width: 260px !important;
   }
 }
+
+/* ---------------------- */
+/*  MISC FIXES            */
+/* ---------------------- */
+table { border-collapse: separate; border-spacing: 0; }
