@@ -183,8 +183,8 @@ img { max-width: 100%; height: auto; }
 
   /* Make the headshot bigger and centered on mobile */
   .headshot {
-    max-width: 340px;
-    width: 80%;
+    max-width: 420px;
+    width: 90%;
     margin: 8px auto 4px;
     border-radius: 14px;
   }
