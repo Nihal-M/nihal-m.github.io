@@ -129,3 +129,10 @@ name {
 span.highlight {
   background-color: #ffffd0;
 }
+
+@media (max-width: 700px) {
+  table { table-layout: fixed; }
+  td[style*="max-width:60%"] { width: 100% !important; display: block; }
+  td[style*="max-width:35%"] { width: 100% !important; display: block; text-align: center; }
+  .hoverZoomLink { max-width: 240px !important; width: 70% !important; }
+}
