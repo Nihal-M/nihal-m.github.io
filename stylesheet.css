@@ -100,13 +100,14 @@
 /* ---------------------- */
 
 a {
-  color: #1772d0;
+  color: #007bff;         /* stronger blue */
   text-decoration: none;
+  font-weight: 600;
 }
 a:focus,
 a:hover {
-  color: #f09228;
-  text-decoration: none;
+  color: #e53935;         /* turns red on hover */
+  text-decoration: underline;
 }
 
 body, td, th, tr, p, a {
