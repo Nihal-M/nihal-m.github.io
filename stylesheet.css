@@ -100,16 +100,21 @@
 /* ---------------------- */
 
 a {
-  color: #007bff;              /* bright modern blue */
-  text-decoration: none;       /* no underline normally */
-  font-weight: 600;            /* semi-bold for visibility */
+  color: #007bff !important;     /* always bright blue */
+  text-decoration: none;         /* no underline by default */
+  font-weight: 600;              /* boldish for visibility */
 }
 
-a:focus,
-a:hover {
-  color: #007bff;              /* keep same blue on hover */
-  text-decoration: underline;  /* only add underline */
+a:visited {
+  color: #007bff !important;     /* keep same blue even after clicking */
 }
+
+a:hover,
+a:focus {
+  color: #007bff !important;     /* same blue on hover */
+  text-decoration: underline;    /* show underline only on hover */
+}
+
 
 body, td, th, tr, p, a {
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
