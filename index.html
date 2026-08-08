@@ -191,16 +191,15 @@
           </tr>
           
           
-          <tr>
+        <tr>
             <!-- Left column: enlarged, responsive image -->
             <td style="padding:20px;width:40%;vertical-align:top;text-align:center;">
               <img 
                 src="images/tmlr.jpg" 
-                alt="TMLR framework"
+                alt="Spurious features through the lens of training dynamics"
                 style="display:block;width:100%;max-width:480px;height:auto;border-radius:10px;box-shadow:0 4px 15px rgba(0,0,0,0.15);margin:auto;"
               >
             </td>
-
             <!-- Right column: text -->
             <td style="padding:20px;width:60%;vertical-align:top;">
               <a href="https://arxiv.org/pdf/2302.09344">
@@ -214,14 +213,12 @@
               <a href="https://www.batman-lab.com/">Kayhan Batmanghelich</a>
               <br>
               <em style="color:#ff0000; font-weight:700;">TMLR 2023, ICMLW 2023</em>
-
               <br><br>
               <a href="https://arxiv.org/pdf/2302.09344">Paper</a>
               /
               <a href="https://github.com/batmanlab/TMLR23_Dynamics_of_Spurious_Features?tab=readme-ov-file">Github</a>
               /
               <a href="https://www.youtube.com/watch?v=kkQ0IKukx5o&amp;ab_channel=NihalMurali" target="_blank" rel="noopener">Video</a>
-
               /
               <a href="https://pitt-my.sharepoint.com/personal/nim123_pitt_edu/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fnim123%5Fpitt%5Fedu%2FDocuments%2FTMLR23%5FDynamics%5Fof%5FSpurious%5FFeatures%2FICML%5FSCIS%5FWorkshop%5FPoster%2Epdf&parent=%2Fpersonal%2Fnim123%5Fpitt%5Fedu%2FDocuments%2FTMLR23%5FDynamics%5Fof%5FSpurious%5FFeatures&ga=1">Poster</a>
               /
@@ -230,7 +227,7 @@
               <a href="https://www.youtube.com/watch?v=6pP8YQX5cmc&ab_channel=ComputationalGenomicsSummerInstituteCGSI">Talk</a>
               <p></p>
               <p>
-                Investigates how neural networks learn spurious features during training and shows that monitoring early-layer dynamics can reveal harmful shortcuts before deployment.
+                Reframes spurious-feature learning through the lens of a network's training dynamics rather than distribution shift alone. The key insight: not all spurious features are harmful—a shortcut only hurts generalization when it is <em>easier</em> to learn than the core signal, a distinction that is model- and dataset-dependent. Using example-difficulty metrics such as Prediction Depth, the paper shows that these harmful shortcuts surface in the learning dynamics of a network's early layers, making them detectable early in training—before they degrade deployment performance—and enabling timely intervention. Validated on both simulated and real medical and vision datasets.
               </p>
             </td>
           </tr>
