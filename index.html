@@ -277,11 +277,10 @@
             <td style="padding:20px;width:40%;vertical-align:top;text-align:center;">
               <img
                 src="images/wacv_fly_reid.jpg"
-                alt="Fruit fly re-identification (WACV 2019)"
+                alt="Cross-day re-identification of individual fruit flies with CNNs (WACV 2019)"
                 style="display:block;width:100%;max-width:480px;height:auto;border-radius:10px;box-shadow:0 4px 15px rgba(0,0,0,0.15);margin:auto;"
               >
             </td>
-
             <!-- Right: text -->
             <td style="padding:20px;width:60%;vertical-align:top;">
               <a href="https://ieeexplore.ieee.org/abstract/document/8658974">
@@ -291,9 +290,11 @@
               <strong>Nihal Murali</strong>,
               <a href="https://www.linkedin.com/in/j-schneider/?originalSubdomain=ca">Jon Schneider</a>,
               <a href="https://discover.research.utoronto.ca/10301-joel-levine">Joel Levine</a>,
-              <a href="https://www.gwtaylor.ca/">Graham Taylor</a>
+              <a href="https://www.gwtaylor.ca/">Graham Taylor</a><sup>&dagger;</sup>
               <br>
               <em style="color:#ff0000; font-weight:700;">WACV 2019</em>
+              <br>
+              <small><sup>&dagger;</sup>Corresponding author</small>
               <br><br>
               <a href="https://ieeexplore.ieee.org/abstract/document/8658974">Paper</a>
               /
@@ -301,21 +302,22 @@
               /
               <a href="https://borealisdata.ca/dataset.xhtml?persistentId=doi:10.5683/SP2/JP4WDF">Dataset</a>
               <p></p>
-              <p>Developed a CNN-based method to maintain individual fruit fly identities across days, enabling long-term behavioral tracking without physical tagging.</p>
+              <p>
+                The first method to re-identify individual, unmarked fruit flies across days—letting biologists run long-term behavioral experiments without tags or paint (which alter behavior) or frame-by-frame tracking (which is infeasible over days). Built on a ResNet-18 backbone that augments existing trackers and trained on ~3M images of 60 flies, the approach isolates a key failure mode—"cross-day accuracy decline," where a fly's appearance drifts from day to day—and counters it with data augmentation and domain-adversarial training (DANN) to learn day-invariant features, keeping the vast majority of flies above 90% re-identification accuracy.
+              </p>
             </td>
           </tr>
 
           
-          <tr>
+        <tr>
             <!-- Left: bigger responsive image -->
             <td style="padding:20px;width:40%;vertical-align:top;text-align:center;">
               <img
                 src="images/fly_brain.png"
-                alt="PLOS ONE: Can Drosophila melanogaster tell who’s who?"
+                alt="Fly-eye model of Drosophila vision for individual recognition (PLOS ONE 2018)"
                 style="display:block;width:100%;max-width:480px;height:auto;border-radius:10px;box-shadow:0 4px 15px rgba(0,0,0,0.15);margin:auto;"
               >
             </td>
-
             <!-- Right: text -->
             <td style="padding:20px;width:60%;vertical-align:top;">
               <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0205043">
@@ -325,15 +327,23 @@
               <a href="https://www.linkedin.com/in/j-schneider/?originalSubdomain=ca">Jon Schneider</a>,
               <strong>Nihal Murali</strong>,
               <a href="https://www.gwtaylor.ca/">Graham Taylor</a>,
-              <a href="https://discover.research.utoronto.ca/10301-joel-levine">Joel Levine</a>
+              <a href="https://discover.research.utoronto.ca/10301-joel-levine">Joel Levine</a><sup>&dagger;</sup>
               <br>
               <em style="color:#ff0000; font-weight:700;">PLOS ONE 2018</em>
+              <br>
+              <small><sup>&dagger;</sup>Corresponding author</small>
               <br><br>
               <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0205043">Paper</a>
               /
+              <a href="https://github.com/j-schneider/fly_eye">GitHub</a>
+              /
+              <a href="https://borealisdata.ca/dataset.xhtml?persistentId=doi:10.5683/SP2/JP4WDF">Dataset</a>
+              /
               <a href="https://cifar.ca/cifarnews/2018/10/25/building-a-fly-brain-in-a-computer/">News</a>
               <p></p>
-              <p>Demonstrated that individual fruit flies possess unique visual features detectable by deep convolutional networks—suggesting visual discrimination among conspecifics despite low-resolution vision.</p>
+              <p>
+                Uses machine learning to argue that fruit flies inhabit a far richer visual world than their low-resolution compound eyes would suggest. Beyond showing that individual <i>D. melanogaster</i> are visually distinct, the paper builds a biologically grounded "fly-eye" model mirroring <i>Drosophila</i>'s visual connectome and shows it can re-identify individual conspecifics from roughly 29×29-pixel images—evidence that the fly's own visual system has the capacity to encode individual identity, a task at which human observers perform near chance.
+              </p>
             </td>
           </tr>
 
