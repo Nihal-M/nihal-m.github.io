@@ -238,11 +238,10 @@
             <td style="padding:20px;width:40%;vertical-align:top;text-align:center;">
               <img 
                 src="images/wacv_augmentation.jpg" 
-                alt="ACE framework"
+                alt="Augmentation by Counterfactual Explanation (ACE) for fixing overconfident classifiers"
                 style="display:block;width:100%;max-width:480px;height:auto;border-radius:10px;box-shadow:0 4px 15px rgba(0,0,0,0.15);margin:auto;"
               >
             </td>
-
             <!-- Right column: text -->
             <td style="padding:20px;width:60%;vertical-align:top;">
               <a href="https://openaccess.thecvf.com/content/WACV2023/papers/Singla_Augmentation_by_Counterfactual_Explanation_-_Fixing_an_Overconfident_Classifier_WACV_2023_paper.pdf">
@@ -256,7 +255,6 @@
               <a href="https://www.batman-lab.com/">Kayhan Batmanghelich</a>
               <br>
               <em style="color:#ff0000; font-weight:700;">WACV 2023</em>
-
               <br>
               <small><sup>*</sup>Equal contribution</small>
               <br><br>
@@ -265,8 +263,7 @@
               <a href="https://github.com/batmanlab/Augmentation_By_Counterfactual_Explanation">GitHub</a>
               <p></p>
               <p>
-                Proposed a counterfactual-based fine-tuning method (ACE) that uses GAN-generated augmentations 
-                to reduce overconfidence and improve uncertainty estimation in deep neural networks.
+                Tackles classifiers that are accurate yet overconfident—a liability in high-stakes settings such as healthcare and autonomous driving, where a model should express uncertainty on ambiguous or out-of-distribution inputs rather than predict with misplaced confidence. The proposed method, ACE, fine-tunes a pre-trained classifier on counterfactual augmentations—realistic images produced by perturbing a query across the model's decision boundary—to repair its uncertainty behavior while retaining predictive accuracy, sharpening the separation of ambiguous in-distribution, near-OOD, and far-OOD samples.
               </p>
             </td>
           </tr>
@@ -354,11 +351,10 @@
             <td style="padding:20px;width:40%;vertical-align:top;text-align:center;">
               <img
                 src="images/drosophila.jpg"
-                alt="Bachelor’s thesis: fly re-identification"
+                alt="Tag-free cross-day identification of individual fruit flies with ResNet CNNs (Bachelor's thesis)"
                 style="display:block;width:100%;max-width:480px;height:auto;border-radius:10px;box-shadow:0 4px 15px rgba(0,0,0,0.15);margin:auto;"
               >
             </td>
-
             <!-- Right: text -->
             <td style="padding:20px;width:60%;vertical-align:top;">
               <a href="https://drive.google.com/file/d/1HYvYZGRhzKJqzlnJUNMSUNPIqmwQDizz/view">
@@ -366,8 +362,18 @@
               </a>
               <br>
               <em>Bachelor’s Thesis</em>, BITS Pilani
+              <br>
+              Advisor: <a href="https://www.mecs-press.org/authors/109561.html">Prof. Surekha Bhanot</a>
               <br><br>
-              <p>Developed a deep learning system using ResNet architectures to automatically recognize and re-identify individual <i>Drosophila melanogaster</i> across days—eliminating manual tagging and enabling long-term behavioral experiments.</p>
+              <a href="https://drive.google.com/file/d/1HYvYZGRhzKJqzlnJUNMSUNPIqmwQDizz/view">Thesis</a>
+              /
+              <a href="https://github.com/uoguelph-mlrg/fly_re_identification">Code (Re-ID)</a>
+              /
+              <a href="https://github.com/j-schneider/fly_eye">Code (Fly-Eye)</a>
+              <p></p>
+              <p>
+                Undergraduate thesis—the foundational work behind the WACV 2019 paper above—on recognizing individual <i>Drosophila melanogaster</i> from images using ResNet-18 CNNs, without the tags or paint that would perturb natural behavior. Same-day accuracy is near-perfect, but the work surfaces a subtle failure mode it names "problem flies": individuals whose accuracy collapses on later days as their appearance drifts with age and pose, exposing cross-day temporal shift as the real obstacle rather than raw model capacity. After systematically probing data augmentation, transfer learning, and multi-day training, the thesis arrives at domain-adversarial training—a gradient-reversal layer that pushes the network to keep identity-discriminative cues while discarding day-specific ones—raising the number of flies re-identified at ≥90% accuracy across days from 47 to 57 out of 60.
+              </p>
             </td>
           </tr>
 
