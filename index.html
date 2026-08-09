@@ -147,8 +147,8 @@
               /
               <a href="https://github.com/batmanlab/EEG-Hybrid-AI-Systems">Code</a>
               <p></p>
-              <p>
-                A hybrid novice–AI system for detecting cerebral ischemia from continuous intraoperative EEG during carotid endarterectomy. By dynamically weighting a minimally-trained novice monitor's assessment against an AI model's prediction, the system achieves performance statistically non-inferior to board-certified neurophysiologists—halving the AI model's false-positive rate at 80% sensitivity while improving precision and calibration.
+               <p>
+                Pairs a minimally-trained novice with an AI model to catch cerebral ischemia from intraoperative EEG—matching board-certified neurophysiologists (statistically non-inferior) while halving the AI's false alarms. Expert-grade surgical monitoring, without the expert.
               </p>
             </td>
           </tr>
@@ -185,7 +185,7 @@
               <a href="https://doi.org/10.64898/2026.08.01.26359458">Paper</a>
               <p></p>
               <p>
-                A comparative study of supervised machine learning models—random forests, gradient boosting, logistic regression, SVMs, and naive Bayes—for automated detection of cerebral ischemia from quantitative EEG during carotid endarterectomy. Random forests achieved the highest sensitivity and precision–recall performance, with alpha-band activity and interhemispheric asymmetry emerging as the most discriminative predictors—pointing to ML as a scalable aid to expert neuromonitoring.
+                Benchmarks five machine-learning models for detecting cerebral ischemia from quantitative EEG during surgery. Random forests lead on sensitivity and precision—and the top predictors, alpha-band power and hemispheric asymmetry, mirror exactly what expert readers watch for.
               </p>
             </td>
           </tr>
@@ -227,7 +227,7 @@
               <a href="https://www.youtube.com/watch?v=6pP8YQX5cmc&ab_channel=ComputationalGenomicsSummerInstituteCGSI">Talk</a>
               <p></p>
               <p>
-                Reframes spurious-feature learning through the lens of a network's training dynamics rather than distribution shift alone. The key insight: not all spurious features are harmful—a shortcut only hurts generalization when it is <em>easier</em> to learn than the core signal, a distinction that is model- and dataset-dependent. Using example-difficulty metrics such as Prediction Depth, the paper shows that these harmful shortcuts surface in the learning dynamics of a network's early layers, making them detectable early in training—before they degrade deployment performance—and enabling timely intervention. Validated on both simulated and real medical and vision datasets.
+                Not all spurious features are harmful—a shortcut only hurts generalization when it's <em>easier</em> to learn than the real signal. By watching a network's training dynamics, the paper shows these harmful shortcuts reveal themselves in the early layers, early in training—catchable and fixable before they ever reach deployment.
               </p>
             </td>
           </tr>
@@ -263,7 +263,7 @@
               <a href="https://github.com/batmanlab/Augmentation_By_Counterfactual_Explanation">GitHub</a>
               <p></p>
               <p>
-                Tackles classifiers that are accurate yet overconfident—a liability in high-stakes settings such as healthcare and autonomous driving, where a model should express uncertainty on ambiguous or out-of-distribution inputs rather than predict with misplaced confidence. The proposed method, ACE, fine-tunes a pre-trained classifier on counterfactual augmentations—realistic images produced by perturbing a query across the model's decision boundary—to repair its uncertainty behavior while retaining predictive accuracy, sharpening the separation of ambiguous in-distribution, near-OOD, and far-OOD samples.
+                An accurate model that's also overconfident is dangerous—in the clinic or the driver's seat. ACE fine-tunes a classifier on counterfactual augmentations—realistic images nudged across its decision boundary—so it flags ambiguous and out-of-distribution inputs instead of guessing confidently, all without sacrificing accuracy.
               </p>
             </td>
           </tr>
@@ -300,7 +300,7 @@
               <a href="https://borealisdata.ca/dataset.xhtml?persistentId=doi:10.5683/SP2/JP4WDF">Dataset</a>
               <p></p>
               <p>
-                The first method to re-identify individual, unmarked fruit flies across days—letting biologists run long-term behavioral experiments without tags or paint (which alter behavior) or frame-by-frame tracking (which is infeasible over days). Built on a ResNet-18 backbone that augments existing trackers and trained on ~3M images of 60 flies, the approach isolates a key failure mode—"cross-day accuracy decline," where a fly's appearance drifts from day to day—and counters it with data augmentation and domain-adversarial training (DANN) to learn day-invariant features, keeping the vast majority of flies above 90% re-identification accuracy.
+                The first system to re-identify individual, unmarked fruit flies across days—no tags, no paint, no frame-by-frame tracking. Trained on ~3M images of 60 flies, it names and beats a key failure mode—"cross-day accuracy decline"—using domain-adversarial training to learn day-invariant features, keeping most flies above 90% accuracy.
               </p>
             </td>
           </tr>
@@ -339,7 +339,7 @@
               <a href="https://cifar.ca/cifarnews/2018/10/25/building-a-fly-brain-in-a-computer/">News</a>
               <p></p>
               <p>
-                Uses machine learning to argue that fruit flies inhabit a far richer visual world than their low-resolution compound eyes would suggest. Beyond showing that individual <i>D. melanogaster</i> are visually distinct, the paper builds a biologically grounded "fly-eye" model mirroring <i>Drosophila</i>'s visual connectome and shows it can re-identify individual conspecifics from roughly 29×29-pixel images—evidence that the fly's own visual system has the capacity to encode individual identity, a task at which human observers perform near chance.
+                Could a fruit fly recognize another fruit fly? Building a "fly-eye" network that mirrors <i>Drosophila</i>'s real visual connectome, this work shows their low-resolution vision—just ~29×29 pixels—carries enough to tell individuals apart, something humans do near chance. A far richer visual world than assumed.
               </p>
             </td>
           </tr>
@@ -372,7 +372,7 @@
               <a href="https://github.com/j-schneider/fly_eye">Code (Fly-Eye)</a>
               <p></p>
               <p>
-                Undergraduate thesis—the foundational work behind the WACV 2019 paper above—on recognizing individual <i>Drosophila melanogaster</i> from images using ResNet-18 CNNs, without the tags or paint that would perturb natural behavior. Same-day accuracy is near-perfect, but the work surfaces a subtle failure mode it names "problem flies": individuals whose accuracy collapses on later days as their appearance drifts with age and pose, exposing cross-day temporal shift as the real obstacle rather than raw model capacity. After systematically probing data augmentation, transfer learning, and multi-day training, the thesis arrives at domain-adversarial training—a gradient-reversal layer that pushes the network to keep identity-discriminative cues while discarding day-specific ones—raising the number of flies re-identified at ≥90% accuracy across days from 47 to 57 out of 60.
+                The undergraduate work behind the WACV 2019 paper: recognizing individual <i>Drosophila</i> with ResNet CNNs, tag-free. Same-day accuracy is near-perfect—but a few "problem flies" collapse on later days as their looks drift, revealing temporal shift, not model capacity, as the real obstacle. Domain-adversarial training then learns cues that identify the fly while ignoring the day, lifting ≥90%-accuracy re-identification from 47 to 57 of 60 flies.
               </p>
             </td>
           </tr>
