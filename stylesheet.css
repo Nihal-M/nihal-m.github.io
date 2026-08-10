@@ -134,9 +134,7 @@ span.highlight {
   display: block;
   width: 100%;
   max-width: 480px;
-  aspect-ratio: 1 / 1;      /* uniform shape for every thumbnail */
-  object-fit: fill;        /* fills the box; crops overflow */
-  object-position: center;
+  height: auto;
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.15);
   margin: auto;
