@@ -129,13 +129,3 @@ name {
 span.highlight {
   background-color: #ffffd0;
 }
-
-.thumb {
-  display: block;
-  width: 100%;
-  max-width: 480px;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
-  margin: auto;
-}
